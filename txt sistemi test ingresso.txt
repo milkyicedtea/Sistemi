@@ -1,0 +1,4 @@
+riportare la funzione
+y=x+2 
+y=16x^2-8x-1
+y=x^3+3x^2+3x+1

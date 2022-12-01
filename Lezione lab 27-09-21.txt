@@ -1,0 +1,29 @@
+Prima parte
+
+una macchina fa parte di un sistema
+una rete è un sistema di collegamento tra 2 o più di macchine
+
+tecnologie disponibili per le memorie = a quelle per i processori (semiconduttori)
+
+doppino telefonico = 2 cavi per il telefono fatti in rame
+
+sul cavo viaggiava un segnale analogico, mentre oggi si hanno segnali digitali
+ad (adsl) = analogico a digitale
+
+intervallo di campionamento = intervallo di valori scelti durante la rappresentazione di una funzione
+
+frequenza di campionamento = intervalli/tempo
+
+router = direzione il segnale per trasmetterlo tra più linee
+
+
+Seconda parte
+
+modem = modula il segnale per farlo acquisire alla mia macchina o lo demodula per farlo arrivare ad altre macchine attraverso una rete
+
+
+cisco = azienda americana che esi occupa di telecomunicazione
+
+sistema informativo è costituito da hardware e software
+
+personal computer = computer usato in un ambito personale
