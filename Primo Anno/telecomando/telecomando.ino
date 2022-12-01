@@ -1,7 +1,6 @@
 //わあああああああああああああああああああああああああああああああああ
 
 // Select which protocol should be used. If none are selected, all will be used
-
 //#define DECODE_DENON        // Includes Sharp
 //#define DECODE_JVC
 //#define DECODE_KASEIKYO
@@ -19,21 +18,20 @@
 //#define DECODE_WHYNTER
 
 //#define DECODE_DISTANCE     // universal decoder for pulse width or pulse distance protocols
-#define DECODE_HASH         // special decoder for all protocols
+//#define DECODE_HASH         // special decoder for all protocols
 
 #define DEBUG               // Activate this for debug output from the decoders
 //#define INFO                // To see valuable informations from universal decoder for pulse width or pulse distance protocols
 
 #include <Arduino.h>
 
+#include <IRremote.hpp>
 
 // Define macros for input and output pin etc.
 
 // #include "PinDefinitionsAndMore.h"
 
-#include <IRremote.hpp>
-
-#define IR_RECEIVE_PIN 2
+#define IR_RECEIVE_PIN A2
 
 #if !defined(STR_HELPER)
 #define STR_HELPER(x) #x
@@ -76,7 +74,10 @@ void loop()
 
     // Serial.println(IrReceiver.available()); // prints 0 if no receiver is available (prints 0)
     // Serial.println(IrReceiver.isIdle()); // prints 1 if no reception is going on (prints 1)
-    // Serial.println(IrReceiver.decode()); // prints 0 if no data is available(prints 0)
+    // Serial.println(IrReceiver.decode()); // prints 0 if no data is available (prints 0)
+    // Serial.println(IrReceiver.decodedIRData.command);
+    IrReceiver.printIRResultAsCVariables.decodedIRData.command(&Serial);
+     delay(400);
     if (IrReceiver.decode())
     {
 
@@ -85,8 +86,8 @@ void loop()
         if (IrReceiver.decodedIRData.protocol == UNKNOWN)
         {
             // Our protocol is UNKNOWN, print some info?
-            Serial.println("IrReceiver.decodedIRData.command: ");
-            Serial.println(IrReceiver.decodedIRData.command); // Prints received command
+            // Serial.println("IrReceiver.decodedIRData.command: ");
+            // Serial.println(IrReceiver.decodedIRData.command); // Prints received command
         }
 
         //Enable comunication back since it stopped when it received
